@@ -2,32 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  <main class="container">
+    <section class="container__image">
+      <img class="container__image--image" src="./images/image-header-desktop.jpg" alt="">
+      <div class="container__image--overlay"></div>
+    </section>
+    <section class="container__text">
+      <article class="container__text--info">
+        <h1 class="container__text--info-header">Get <span class="accent">insights</span> that help your business grow.</h1>
+        <p class="container__text--info-description label">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+        </p>
+      </article>
+      <section class="container__text--stats">
 
-  Get insights that help your business grow.
+        <div class="container__text--stats-companies">
+          <p class="num">10k+</p>
+          <p class="label">COMPANIES</p>
+        </div>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
+        <div class="container__text--stats-templates">
+            <p class="num">314</p>
+            <p class="label">TEMPLATES</p>
+        </div>
+        <div class="container__text--stats-queries">
+            <p class="num">12M+</p>
+            <p class="label">QUERIES</p>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/Hhmmmk">Affogatoo</a>.
+  </footer>
 </body>
 </html>
