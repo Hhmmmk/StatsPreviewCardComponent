@@ -29,7 +29,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 80vw;
+  max-width: 60vw;
 }
 
 .container__image {
@@ -38,6 +38,7 @@ body {
   grid-column-start: 2;
   border-radius: 0 0.5rem 0.5rem 0;
   -webkit-border-radius: 0 0.5rem 0.5rem 0;
+  min-width: 350px;
 }
 
 .container__image--image {
@@ -48,25 +49,92 @@ body {
 }
 
 .container__text {
+  display: flex;
+  flex-direction: column;
   grid-column-start: 1;
   grid-row-start: 1;
   background: var(--ddBlueCardBG);
   border-radius: 0.5rem 0 0 0.5rem;
   -webkit-border-radius: 0.5rem 0 0 0.5rem;
-  -moz-border-radius: 0.5rem 0 0 0.5rem;
-  -ms-border-radius: 0.5rem 0 0 0.5rem;
-  -o-border-radius: 0.5rem 0 0 0.5rem;
+  padding: 4rem;
+  justify-content: space-between;
+  min-width: 350px;
 }
 
+.container__text--info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
 
+.container__text--info-header {
+  font-size: 2.5rem;
+}
 
+.container__text--info-header span {
+  color: var(--softVioletAccent);
+}
 
+.container__text--info-description {
+  font-size: 1.25rem;
+}
 
+.container__text--stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+}
 
-footer {
-  position: absolute;
-  top: 98%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+.num {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+@media (max-width: 450px) {
+  .container__text--info-header {
+    font-size: 1.75rem;
+  }
+
+  .container__text--stats {
+    gap: 2rem;
+  }
+
+  .num {
+    font-size: 1.25rem
+  }
+
+  .label {
+    font-size: 0.75rem;
+  }
+
+  .container__text--info-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 915px) {
+  .container {
+    margin-bottom: 1rem;
+    max-height: 95%;
+    max-width: 95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .container__image {
+    grid-column-start: 1;
+    max-width: 600px;
+    border-radius: 0.5rem 0.5rem 0 0;
+    -webkit-border-radius: 0.5rem 0.5rem 0 0;
+}
+  .container__text {
+    grid-row-start: 2;
+    max-width: 600px;
+    border-radius: 0 0 0.5rem 0.5rem;
+    -webkit-border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1.75rem;
+}
 }
